@@ -30,6 +30,6 @@ reg  signed [psum_bw-1:0] psum_q;
     end 
     
   end 
-  assign out = pum_q;
+  assign out = psum_q;
   
 endmodule
