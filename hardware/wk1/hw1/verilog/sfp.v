@@ -18,5 +18,18 @@ output  signed [psum_bw-1:0] out;
 reg  signed [psum_bw-1:0] psum_q;
 
 // Your code goes here
-tutyuyt
+  always @ (posedge clk or posedge reset) begin
+    if (reset) begin
+      psum_q <= 0;
+    end 
+    else if (relu && psum_q<thres) begin 
+      psum_q <=0;
+    end 
+    else if (acc) begin 
+      psum_q <= psum_q+in;
+    end 
+    
+  end 
+  assign out = pum_q;
+  
 endmodule
